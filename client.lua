@@ -23,10 +23,10 @@ end)
 --------------------------- Configuration ---------------------------
 function Refresh()
     if ESX.PlayerData.job.name == 'police' then
-        exports['rp-radio']:GivePlayerAccessToFrequencies(1, 2, 3, 4)                   --Locked frequencies for police
+        exports['rp-radio']:GivePlayerAccessToFrequencies(1, 2, 3, 4)                  --Locked frequencies for police
         exports['rp-radio']:RemovePlayerAccessToFrequencies(5, 6)  
     elseif ESX.PlayerData.job.name == 'ambulance' then
-        exports['rp-radio']:GivePlayerAccessToFrequencies(4)                            --Locked frequencies for ambulance
+        exports['rp-radio']:GivePlayerAccessToFrequencies(4)                           --Locked frequencies for ambulance
         exports['rp-radio']:RemovePlayerAccessToFrequencies(1, 2, 3, 5, 6)
     elseif ESX.PlayerData.job.name == 'mechanic' then
         exports['rp-radio']:GivePlayerAccessToFrequencies(5)                           --Locked frequencies for mechanic
@@ -36,6 +36,6 @@ function Refresh()
         exports['rp-radio']:RemovePlayerAccessToFrequencies(1, 2, 3, 4, 5) 
     else
         Citizen.Wait(1000)
-        exports['rp-radio']:RemovePlayerAccessToFrequencies(1, 2, 3, 4, 5, 6)           --All locked frequencies
+        exports['rp-radio']:RemovePlayerAccessToFrequencies(1, 2, 3, 4, 5, 6)          --All locked frequencies
     end
 end
